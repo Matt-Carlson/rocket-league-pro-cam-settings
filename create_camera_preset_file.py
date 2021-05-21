@@ -20,7 +20,7 @@ else:
 print("Writing to file")
 f = open(filename, "w")
 for player_settings in settings_list:
-    if customize_settings.record_all_settings or player_settings['Player'] in customize_settings.included_players:
+    if customize_settings.is_player_included_in_filters(player_settings):
         if customize_settings.include_team_in_name and player_settings['Team'] != '':
             f.write(player_settings['Team'])
             f.write('_')

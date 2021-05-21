@@ -17,14 +17,36 @@ include_team_in_name = True
 
 # Use true to replace the file that by default has some pro settings.
 # False will instead name the file for the custom file that's empty by default
-replace_default_pro_settings = True
+replace_default_pro_settings = False
 
-# If you want to record all 500 (yes, over 500) settings, then set to true.
-# Otherwise, write the player names you want below. May do by team name later but this page doesn't have everyone =/
-record_all_settings = False
+# Set to true to filter by team name. This means all players under the abbreviations in included_teams will be added
+filter_by_team = True
+
+# Set to true to filter by individual players. This will stack with the above filter for teams to include only players on those teams AND in included_players
+filter_by_player = False
+
+# Team abbreviations as listed on Liquipedia to include.
+# Make sure that they match how it appears on liquipedia (all caps too)
+# you MUST have filter_by_team set to true for this to matter. This lets you turn it on/off without erasing/commenting out this list
+included_teams = [
+    'BDS',
+    'VIT',
+    'TB',
+    'GLD',
+    'SLY',
+    'TQ',
+
+    'NRG',
+    'NV',
+    'SSG',
+    'RGE',
+    'G2',
+    'FAZE'
+]
 
 # Player names as listed on liquipedia to include. Keeps your list from being
 # 20 years long. If the names aren't an EXACT match (including the '.'s), they won't show up
+# you MUST have filter_by_player set to true for this to matter. This lets you turn it on/off without erasing/commenting out this list
 included_players = [
     'Extra',
     'M0nkey M00n',
@@ -84,3 +106,14 @@ included_players = [
     'Fairy Peak!',
     'Kaydop'
 ]
+
+# Function I use to keep this logic outside of the already busy main file
+def is_player_included_in_filters(player_settings):
+    """
+        Determines if the given player_settings dictionary should be included according to the settings in customize_settings.py
+    """
+    if filter_by_team and player_settings['Team'] not in included_teams:
+        return False
+    if filter_by_player and player_settings['Player'] not in included_players:
+        return False
+    return True
