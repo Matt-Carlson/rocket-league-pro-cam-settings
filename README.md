@@ -1,14 +1,14 @@
-# Up to date camera settings presets
+# Up to date Camera Settings Presets
 
 A python program to scrape [Liquipedia camera settings page](https://liquipedia.net/rocketleague/List_of_player_camera_settings) and create a file with the players settings you choose to include.
 
-### [Requirements and imports](#requirements-and-imports)
+### [Requirements and Imports](#requirements-and-imports)
 
 ### [Usage](#usage)
 
-### [Setup and settings](#setup-and-settings)
+### [Setup and Settings](#setup-and-settings)
 
-## Requirements and imports
+## Requirements and Imports
 
 Built on python3, and uses [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
 
@@ -40,7 +40,7 @@ It will create a file in the same directory by the name `cameras_rlcs.data` or `
 Take that file, and place it into your `bakkesmod\data` directory (there should already be files by those names there. If you aren't overwriting, it's probably the wrong place)
 If you don't know where it is, open bakkesmod, and click file -> open bakkesmod folder. Then navigate into the data folder.
 
-## Setup and settings
+## Setup and Settings
 
 the [customize_settings.py](https://github.com/Matt-Carlson/rocket-league-pro-cam-settings/blob/main/customize_settings.py) file will let you customize how the file is created. You can:
 
