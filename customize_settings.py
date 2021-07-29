@@ -17,7 +17,7 @@ include_team_in_name = True
 
 # Use true to replace the file that by default has some pro settings.
 # False will instead name the file for the custom file that's empty by default
-replace_default_pro_settings = False
+replace_default_pro_settings = True
 
 # Set to true to filter by team name. This means all players under the abbreviations in included_teams will be added
 filter_by_team = True

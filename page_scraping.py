@@ -25,11 +25,15 @@ Scrape the table from liquipedia, and return list of dictionaries that represent
                 name = data.find('b').find('a').get_text().strip()
                 player_settings[data_label] = name
             elif data_label == "Team":
-                span = data.find('span', {'class': 'team-template-text'})
-                if span is None:
+                try:
+                    span = data.find('span', {'class': 'team-template-text'})
+                    if span is None:
+                        player_settings[data_label] = ''
+                    else:
+                        player_settings[data_label] = span.find('a').get_text()
+                except:
+                    # TBD (To Be Decided) shows up as <abbr> not <a>. Made this try/except to future proof bc I'm lazy
                     player_settings[data_label] = ''
-                else:
-                    player_settings[data_label] = span.find('a').get_text()
             else:
                 player_settings[data_label] = data.get_text().strip()
         list_of_cam_settings.append(player_settings)
