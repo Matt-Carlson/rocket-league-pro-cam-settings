@@ -17,7 +17,7 @@ include_team_in_name = True
 
 # Use true to replace the file that by default has some pro settings.
 # False will instead name the file for the custom file that's empty by default
-replace_default_pro_settings = True
+replace_default_pro_settings = False
 
 # Set to true to filter by team name. This means all players under the abbreviations in included_teams will be added
 filter_by_team = True
@@ -31,17 +31,22 @@ filter_by_player = False
 included_teams = [
     'BDS',
     'VIT',
-    'TB',
-    'GLD',
-    'SLY',
-    'TQ',
+    'DIG',
+    'KC',
+    'EG',
+    'WR',
+    'MSF',
+    'SMPR',
 
     'NRG',
     'NV',
     'SSG',
-    'RGE',
+    'v1',
+    'TN',
+    'FAZE',
+    'NV',
     'G2',
-    'FAZE'
+    'XSET'
 ]
 
 # Player names as listed on liquipedia to include. Keeps your list from being

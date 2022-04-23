@@ -10,7 +10,9 @@ A python program to scrape [Liquipedia camera settings page](https://liquipedia.
 
 ## Requirements and Imports
 
-Built on python3, and uses [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
+- [Python3](https://www.python.org/)
+- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
+- Requests python package
 
 ## Usage
 
