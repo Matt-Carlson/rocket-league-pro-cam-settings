@@ -6,7 +6,6 @@ settings_list = page_scraping.get_table()
 
 # Sort by team if team names are included
 print("Sorting players")
-print(settings_list)
 if customize_settings.include_team_in_name:
     settings_list = sorted(settings_list, key=lambda k: k['Team'])
 else:
