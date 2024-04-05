@@ -4,12 +4,12 @@
 # The format the default file has for each setting is in the comment on that line
     # i.e. permFOV can be 110, 095, ...
 perm_fov = None              # 000
+perm_distance = None         # 000.0
 perm_height = None           # 000
 perm_angle = None            # -0
 perm_stiffness = None        # 0.0
-perm_transition_speed = 2.00  # 1.00
-perm_distance = None         # 000.0
 perm_swivel_speed = 10.00      # 0.00
+perm_transition_speed = 2.00  # 1.00
 
 # Use true to place the team abbreviation before player name in the menu
 # It will be sorted by teams if you do this
@@ -29,24 +29,22 @@ filter_by_player = False
 # Make sure that they match how it appears on liquipedia (all caps too)
 # you MUST have filter_by_team set to true for this to matter. This lets you turn it on/off without erasing/commenting out this list
 included_teams = [
+    'KC',
     'BDS',
     'VIT',
-    'DIG',
-    'KC',
-    'EG',
-    'WR',
-    'MSF',
-    'SMPR',
+    'M8',
 
-    'NRG',
-    'NV',
-    'SSG',
-    'v1',
-    'TN',
-    'FAZE',
-    'NV',
     'G2',
-    'XSET'
+    'GENG',
+    'LG',
+    'OG',
+    
+    'PWR',
+    'QTPG',
+    'FUR',
+    'COL',
+    'FLCN',
+    'R1'
 ]
 
 # Player names as listed on liquipedia to include. Keeps your list from being
@@ -112,7 +110,6 @@ included_players = [
     'Kaydop'
 ]
 
-# Function I use to keep this logic outside of the already busy main file
 def is_player_included_in_filters(player_settings):
     """
         Determines if the given player_settings dictionary should be included according to the settings in customize_settings.py

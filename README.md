@@ -17,7 +17,7 @@ A python program to scrape [Liquipedia camera settings page](https://liquipedia.
 ## Usage
 
 Make sure you set up the [customize_settings.py](https://github.com/Matt-Carlson/rocket-league-pro-cam-settings/blob/main/customize_settings.py) file. I have my own there but you probably don't want the same permanent settings I do.
-The most important thing to check are those permanent settings at the top
+The most important thing to check are those permanent settings at the top. Below that is the part you care about more.
 
 ```python
 # If you want to ignore certain settings, then manually set the settings you want here
@@ -25,19 +25,19 @@ The most important thing to check are those permanent settings at the top
 # The format the default file has for each setting is in the comment on that line
     # i.e. permFOV can be 110, 095, ...
 perm_fov = None              # 000
+perm_distance = None         # 000.0
 perm_height = None           # 000
 perm_angle = None            # -0
 perm_stiffness = None        # 0.0
-perm_transition_speed = 2.00  # 1.00
-perm_distance = None         # 000.0
 perm_swivel_speed = 10.00      # 0.00
+perm_transition_speed = 2.00  # 1.00
 ```
 
 As it's listed here the swivel speed will always be 10 and transition speed 2, for every preset, regardless of what it says on Liquipedia.
 This is a convience if, like me, you have some settings you don't want to change between your presets.
 
 After editing the settings file, just run the updateCamSettings.py file as `py create_camera_preset_file.py`.
-It will create a file in the same directory by the name `cameras_rlcs.data` or `cameras_custom.cfg`. (The first option when you move it to your bakkesmod directory will overwrite the default rlcs settings that appear by default, and when it updates. The second doesn't overwrite those, and they appear first)
+It will create a file in the same directory by the name `cameras_rlcs.data` or `cameras_custom.cfg`. (The first option when you move it to your bakkesmod directory will overwrite the default rlcs settings that appear by default, and when it updates. BakkesMod will overwrite your stuff when it updates on this. The second doesn't overwrite those, and they appear first, so just use that tbh.)
 
 Take that file, and place it into your `bakkesmod\data` directory (there should already be files by those names there. If you aren't overwriting, it's probably the wrong place)
 If you don't know where it is, open bakkesmod, and click file -> open bakkesmod folder. Then navigate into the data folder.
@@ -60,12 +60,12 @@ the [customize_settings.py](https://github.com/Matt-Carlson/rocket-league-pro-ca
 # The format the default file has for each setting is in the comment on that line
     # i.e. permFOV can be 110, 095, ...
 perm_fov = None              # 000
+perm_distance = None         # 000.0
 perm_height = None           # 000
 perm_angle = None            # -0
 perm_stiffness = None        # 0.0
-perm_transition_speed = 2.00  # 1.00
-perm_distance = None         # 000.0
 perm_swivel_speed = 10.00      # 0.00
+perm_transition_speed = 2.00  # 1.00
 ```
 
 These are the permanent settings. If, like me, you have some settings you don't want to change between your presets then setting them here will overwrite what the pros have.
@@ -79,7 +79,7 @@ include_team_in_name = True
 ```
 
 This only affects the display of the presets in your settings menu. Making this true means that players will show up with their team name first, and the presets will be ordered by team alphabetically.
-so bds members show as `BDS_Extra` `BDS_MaRc_By_8.` `BDS_M0nkey_M00n` when set to true, and `Extra` `MaRc_By_8.` `M0nkey_M00n` when false.
+so bds members show as `BDS_Extra` `BDS_MaRc_By_8.` `BDS_M0nkey_M00n` when set to true, and `Extra` `MaRc_By_8.` `M0nkey_M00n` when false. (Dating when I made this. If it didn't already have a date attached.)
 If a player doesn't belong to any team, then they show up by just their name.
 
 ```python
@@ -126,5 +126,5 @@ included_players = [
 ```
 
 These lists are used to declare what teams or players you want to include.
-The `included_teams` should match the abbreviations that are on Liquipedia. It's case-sensitive so caps-lock it. Or copy/paste
+The `included_teams` should match the abbreviations that are on Liquipedia. It's case-sensitive so caps-lock it. Or copy/paste.
 The `included_players` are also case-sensitive and must match exactly the player names on Liquipedia. (See that '.' on MaRc_By_8.? that needs to be there. Again, copy/paste it from the [Table I use](https://liquipedia.net/rocketleague/List_of_player_camera_settings))
