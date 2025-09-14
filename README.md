@@ -69,7 +69,7 @@ perm_transition_speed = 2.00  # 1.00
 ```
 
 These are the permanent settings. If, like me, you have some settings you don't want to change between your presets then setting them here will overwrite what the pros have.
-By default these are the settings, so the transition speed will always be 2, and swivel speed always 10, and all others will vary according to Liquipedia's record.
+By default these are the settings, so the transition speed will always be 2, and swivel speed always 10, and all others will vary according to Liquipedia's record. Set the swivel / transition speed to "None" to capture pro settings.
 The default format for each is displayed in a comment on the same line. I doubt it's necessary but I copied it over anyway.
 
 ```python
