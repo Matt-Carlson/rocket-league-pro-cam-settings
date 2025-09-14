@@ -26,25 +26,53 @@ for player_settings in settings_list:
     f.write(player_settings["Player"].replace(" ", "_"))
     f.write("\t")
 
-    f.write(player_settings["FOV"]) if customize_settings.perm_fov is None else f.write(str(customize_settings.perm_fov))
+    (
+        f.write(player_settings["FOV"])
+        if customize_settings.perm_fov is None
+        else f.write(str(customize_settings.perm_fov))
+    )
     f.write("\t")
 
-    f.write(player_settings["Height"]) if customize_settings.perm_height is None else f.write(str(customize_settings.perm_height))
+    (
+        f.write(player_settings["Height"])
+        if customize_settings.perm_height is None
+        else f.write(str(customize_settings.perm_height))
+    )
     f.write("\t")
 
-    f.write(player_settings["Angle"]) if customize_settings.perm_angle is None else f.write(str(customize_settings.perm_angle))
+    (
+        f.write(player_settings["Angle"])
+        if customize_settings.perm_angle is None
+        else f.write(str(customize_settings.perm_angle))
+    )
     f.write("\t")
 
-    f.write(player_settings["Stiffness"]) if customize_settings.perm_stiffness is None else f.write(str(customize_settings.perm_stiffness))
+    (
+        f.write(player_settings["Stiffness"])
+        if customize_settings.perm_stiffness is None
+        else f.write(str(customize_settings.perm_stiffness))
+    )
     f.write("\t")
 
-    f.write(player_settings["Transition speed"]) if customize_settings.perm_transition_speed is None else f.write(str(customize_settings.perm_transition_speed))
+    (
+        f.write(player_settings["Transition speed"])
+        if customize_settings.perm_transition_speed is None
+        else f.write(str(customize_settings.perm_transition_speed))
+    )
     f.write("\t")
 
-    f.write(player_settings["Distance"]) if customize_settings.perm_distance is None else f.write(str(customize_settings.perm_distance))
+    (
+        f.write(player_settings["Distance"])
+        if customize_settings.perm_distance is None
+        else f.write(str(customize_settings.perm_distance))
+    )
     f.write("\t")
 
-    f.write(player_settings["Swivel speed"]) if customize_settings.perm_swivel_speed is None else f.write(str(customize_settings.perm_swivel_speed))
+    (
+        f.write(player_settings["Swivel speed"])
+        if customize_settings.perm_swivel_speed is None
+        else f.write(str(customize_settings.perm_swivel_speed))
+    )
 
     f.write("\n")
 f.close()
