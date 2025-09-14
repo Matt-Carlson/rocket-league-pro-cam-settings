@@ -42,6 +42,9 @@ It will create a file in the same directory by the name `cameras_rlcs.data` or `
 Take that file, and place it into your `bakkesmod\data` directory (there should already be files by those names there. If you aren't overwriting, it's probably the wrong place)
 If you don't know where it is, open bakkesmod, and click file -> open bakkesmod folder. Then navigate into the data folder.
 
+To add a note, BakkesMod doesn't support demo transition time, and liquipedia doesn't track it anyway, so it will not change from what you set it to.
+Also, BakkesMod will untick the invert swivel option if you use that. I know how annoying that is. Nothing I can do about it.
+
 ## Setup and Settings
 
 the [customize_settings.py](https://github.com/Matt-Carlson/rocket-league-pro-cam-settings/blob/main/customize_settings.py) file will let you customize how the file is created. You can:
